@@ -1,0 +1,103 @@
+$background-color:rgba(91,192,222,.1);
+$deep-color:#5bc0de; 
+$light-color:#88dff9; 
+$hover-deep-color:rgba(91,192,222,.8);
+$hover-light-color:rgba(136,223,249,.8);
+$fdcolor:'#333';   
+$flcolor:'#666';    
+$bordercolor: #eee; 
+$white:#fff;
+
+@mixin radius($radius:5px){  
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius; 
+    border-radius:$radius;
+}
+@mixin shadow($a,$b,$c,$col){ 
+    -webkit-box-shadow:$a $b $c $col;
+    -moz-box-shadow:$a $b $c $col;
+    box-shadow:$a $b $c $col;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+// bian ji mo kuai
+.edit_module{
+    background: #fff;
+    padding:15px;
+    @include radius(5px);
+    margin-top:15px;
+    .edit_module_btn{
+        text-align: right;
+        .el-button--primary{
+            background:$deep-color;
+            border-color:$deep-color;
+        }
+    }
+}
+// list mo kuai
+.list_module{
+    height: 100%;
+    overflow: auto;
+    padding:15px;
+    background:#fff;
+    margin-top:10px;
+    @include radius(5px);
+    .table_body{
+        width:100%;
+        background:#fff;
+        @include radius(5px);
+        box-sizing:border-box;
+        h4{
+            font-size:16px; 
+            line-height:20px; 
+            font-weight: normal;
+            padding:6px 0 15px 15px;
+            position: relative;
+            &::before{
+                position: absolute; 
+                content:"";
+                width:3px; 
+                height:20px;
+                background:#5BC0DE;
+                left:0;
+                top:6px;
+            }
+        }
+    }
+}
+//mian bao xie
+.el-breadcrumb__item:last-child .el-breadcrumb__inner, .el-breadcrumb__item:last-child .el-breadcrumb__inner a, .el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover, .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+    color: #5bc0de;
+}
+
+//fen ye
+.el-pagination{text-align:center; padding:20px 0}
+
+
+//tanchukuang
+.el-form-item{margin-bottom:0;padding:10px 0}
+#addForm{max-height:250px; overflow-y: scroll;}
+#addForm .el-select{width:100%;}
+
+//table
+.table-striped>tbody>tr:nth-of-type(odd){background:$background-color;}
+.el-table--striped .el-table__body tr.el-table__row--striped td{background:$background-color;}
+.table_body .el-button--mini{padding:7px; position:relative;}
+.table_body .el-button--mini span.text{display:block; position: absolute; background:$deep-color; 	color:#fff; padding:5px 8px; left:-7px; top:-24px; border-radius:4px; display:none;}
+.table_body .el-button--mini:hover span.text{display:block;}
+.table_body .el-table .cell{
+    color: #333;
+    font-size: 14px;
+    overflow: visible;
+}
+//btn hover
+.plus-btn,.search-btn{background:$deep-color; border-color:$deep-color;}
+.plus-btn:hover{background:$hover-deep-color; border-color:rgba(91,192,222,.8)}
+.search-btn{background:$light-color;border-color:$light-color;}
+.search-btn:hover{background:$hover-light-color;border-color:$hover-light-color;}
+
+
+

@@ -1,0 +1,20 @@
+$background-color:rgba(91,192,222,.1); //背景颜色
+$deep-color:#5bc0de;  //深蓝色
+$light-color:#88dff9; //浅蓝色
+$hover-deep-color:rgba(91,192,222,.8);//深蓝色滑过
+$hover-light-color:rgba(136,223,249,.8);//浅蓝色滑过
+$fdcolor:'#333';    //深色字体
+$flcolor:'#666';    //浅色字体
+$bordercolor: #eee; //边框颜色
+$white:#fff;//白色
+
+@mixin radius($radius:5px){  //圆角 引用@include radius(10px);
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius; 
+    border-radius:$radius;
+}
+@mixin shadow($a,$b,$c,$col){ //阴影 @include shadow(0,0,10px,#ccc)
+    -webkit-box-shadow:$a $b $c $col;
+    -moz-box-shadow:$a $b $c $col;
+    box-shadow:$a $b $c $col;
+}
